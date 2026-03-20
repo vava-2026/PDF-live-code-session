@@ -21,7 +21,6 @@ import java.util.List;
 
 public class PDF_demo {
 
-    // ČÍTANIE – extrakcia textu (Vitalii)
     public static void readPDF(String path) throws IOException {
 
         try (PDDocument doc = PDDocument.load(new File(path))) {
@@ -34,7 +33,6 @@ public class PDF_demo {
         }
     }
 
-    // POČET STRÁN A ROZMERY (Vitalii)
     public static void infoPDF(String cesta) throws IOException {
         try (PDDocument doc = PDDocument.load(new File(cesta))) {
 
@@ -56,7 +54,6 @@ public class PDF_demo {
         }
     }
 
-    // METADÁTA (Vitalii)
     public static void metadataPDF(String vstup, String vystup) throws IOException {
         try (PDDocument doc = PDDocument.load(new File(vstup))) {
 
@@ -72,7 +69,6 @@ public class PDF_demo {
         }
     }
 
-    // ČÍTANIE METADÁT (Vitalii)
     public static void readMetadataPDF(String cesta) throws IOException {
         try (PDDocument doc = PDDocument.load(new File(cesta))) {
 
@@ -85,7 +81,6 @@ public class PDF_demo {
         }
     }
 
-    // Vytvorenie PDF s rôznymi efektmi (Arseniy)
     public static void makePDF(String path) throws IOException {
         try (PDDocument doc = new PDDocument()) {
 
@@ -151,7 +146,6 @@ public class PDF_demo {
         }
     }
 
-    // Úprava existujúceho PDF – pridanie textu (Arseniy)
     public static void changePDF(String vstup, String vystup) throws IOException {
         try (PDDocument doc = PDDocument.load(new File(vstup))) {
             PDPage strana = doc.getPage(0); // prvá strana
@@ -170,7 +164,6 @@ public class PDF_demo {
         }
     }
 
-    // OCHRANA PDF HESLOM A NASTAVENIE PRAV (Andrii)
     public static void passwordPDF(String input, String output) throws IOException {
 
         try (PDDocument doc = PDDocument.load(new File(input))) {
@@ -193,7 +186,6 @@ public class PDF_demo {
         }
     }
 
-    // ZLUČENIE PDF SÚBOROV (Andrii)
     public static void mergePdf() throws IOException {
         PDFMergerUtility merger = new PDFMergerUtility();
         merger.addSource("test.pdf");
@@ -202,7 +194,6 @@ public class PDF_demo {
         merger.mergeDocuments(null);
     }
 
-    // ZLUČENIE PDF SÚBOROV (Andrii)
     public static void splitPdf() throws IOException {
         try (PDDocument doc = PDDocument.load(new File("upraveny.pdf"))) {
 
