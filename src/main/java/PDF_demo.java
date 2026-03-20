@@ -117,7 +117,7 @@ public class PDF_demo {
 
                 // Obrázok
                 PDImageXObject image = PDImageXObject.createFromFile("image.png", doc);
-                cs.drawImage(image, 50, 500, 200, 150);
+                cs.drawImage(image, 50, 450, 200, 150);
 
                 // Bold + italic text
                 cs.setNonStrokingColor(Color.MAGENTA);
