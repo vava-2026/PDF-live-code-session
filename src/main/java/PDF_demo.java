@@ -117,7 +117,7 @@ public class PDF_demo {
 
                 // Modrý rámik okolo textu
                 cs.setStrokingColor(Color.BLUE);
-                cs.addRect(45, 695, 200, 50);
+                cs.addRect(45, 685, 200, 50);
                 cs.stroke();
 
                 // Obrázok
